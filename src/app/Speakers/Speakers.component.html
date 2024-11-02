@@ -1,0 +1,11 @@
+<section class="user-cards" aria-label="User Profiles">
+  <article class="user-cards__card">
+    <button class="user-cards__button" [class.active]="selected" (click)="onSelectUser()" >
+      <img class="user-cards__image" [src]="imagePath" />
+      <h3 class="user-cards__name">{{ speaker.name }}</h3>
+      <p class="user-cards__role">{{ speaker.role }}</p>
+      <p class="user-cards__company">{{ speaker.company }}</p>
+    </button>
+  </article>
+</section>
+

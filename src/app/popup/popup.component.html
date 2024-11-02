@@ -1,0 +1,24 @@
+<section id="popup">
+    <div class="popup-container">
+        <button class="close-button" (click)="closePopup()" aria-label="Close popup">✖</button>
+        <article class="user-cards__card" role="region" aria-labelledby="user-card-title">
+            <div class="user-cards__content">
+                <img class="user-cards__image" [src]="imagePath" alt="Profile picture of {{ name }}" />
+                <div class="user-cards__info">
+                    <h3 class="user-cards__name" id="user-card-title">{{ name }}</h3>
+                    <p class="user-cards__role">{{ role }}</p>
+                    <p class="user-cards__company">{{ company }}</p>
+                    <div class="logo-container">
+                        <img src="assets/drupal.png" alt="Drupal Logo" class="logo" />
+                        <img src="assets/x.png" alt="X Logo" class="logo" />
+                        <img src="assets/linkedin.png" alt="LinkedIn Logo" class="logo" />
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="separator" role="separator"></div>
+
+        <p class="user-cards__summary">{{ summary }}</p>
+    </div>
+</section>

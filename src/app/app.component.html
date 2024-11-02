@@ -1,0 +1,50 @@
+<app-header />
+
+<main>
+  <div class="main__content">
+    @if (selectedUser)
+    {
+      <app-popup 
+                 [userId]="selectedUser.id" 
+                 [name]="selectedUser.name"
+                 [summary]="selectedUser.summary"
+                 [role]="selectedUser.role"
+                 [avatar]="selectedUser.avatar"
+                 [company]="selectedUser.company"
+                 (close)="onClosePopup()"
+                 class="main__tasks" />
+    }
+
+
+    <div class="main__users-container">
+      <button 
+        class="main__slider-btn main__slider-btn--prev" 
+        (click)="previousSlide()"
+        [disabled]="currentSlide === 0"
+      >
+        &lt;
+      </button>
+
+      <ul class="main__users">
+        @for (speaker of visibleSpeakers; track speaker.id)
+        {
+          <li class="main__user-item">
+            <app-Speakers
+              [speaker]="speaker"
+              [selected]="speaker.id === selectedSpeakerId"
+              (select)="onSelectSpeaker($event)"
+            />
+          </li>
+        }
+      </ul>
+
+      <button 
+        class="main__slider-btn main__slider-btn--next"
+        (click)="nextSlide()"
+        [disabled]="currentSlide >= maxSlides"
+      >
+        &gt;
+      </button>
+    </div>
+  </div>
+</main>
