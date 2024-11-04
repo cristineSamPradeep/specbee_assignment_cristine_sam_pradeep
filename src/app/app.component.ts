@@ -8,7 +8,6 @@ import { popupComponent } from "./popup/popup.component";
   standalone: true,
   imports: [HeaderComponent, SpeakersComponent, popupComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   speakers = DUMMY_SPEAKERS;

@@ -7,7 +7,6 @@ import { type Speakers } from './Speakers.model';
   selector: 'app-Speakers',
   standalone: true,
   templateUrl: './Speakers.component.html',
-  styleUrl: './Speakers.component.scss'
 })
 
 export class SpeakersComponent {

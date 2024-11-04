@@ -1,11 +1,18 @@
-<section class="user-cards" aria-label="User Profiles">
-  <article class="user-cards__card">
-    <button class="user-cards__button" [class.active]="selected" (click)="onSelectUser()" >
-      <img class="user-cards__image" [src]="imagePath" />
-      <h3 class="user-cards__name">{{ speaker.name }}</h3>
-      <p class="user-cards__role">{{ speaker.role }}</p>
-      <p class="user-cards__company">{{ speaker.company }}</p>
+<section style="display: flex; flex-direction: column; gap: 1rem;" aria-label="User Profiles">
+  <article style="border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); overflow: hidden; width: 250px;">
+    <button style="display: flex; 
+                    flex-direction: column; 
+                    align-items: center; 
+                    justify-content: center; 
+                    background-color: white; color: black; 
+                    font-weight: bolder; border: none; font: inherit; cursor: pointer; 
+                    width: 100%; height: 250px; text-align: center;" 
+            [class.active]="selected" (click)="onSelectUser()" >
+      <img style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);"  
+      src="{{ imagePath }}"/>
+      <h3 style="margin: 0; padding: 0; font-size: 1.25rem; font-weight: 600;">{{ speaker.name }}</h3>
+      <p style="margin: 0; padding: 0; font-size: 1rem; color: black; font-weight: 500;">{{ speaker.role }}</p>
+      <p style="margin: 0; padding: 0; font-size: 0.875rem; color: grey; font-weight: 400;">{{ speaker.company }}</p>
     </button>
   </article>
 </section>
-

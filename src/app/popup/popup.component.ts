@@ -5,7 +5,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'app-popup',
   standalone: true,
   templateUrl: './popup.component.html',
-  styleUrl: './popup.component.scss'
 })
 export class popupComponent  {
   @Input({required : true}) userId!: string;
